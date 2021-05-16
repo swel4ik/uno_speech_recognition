@@ -9,7 +9,7 @@ with sr.Microphone() as source:
     audio = r.listen(source, phrase_time_limit=10)
 
 try:
-    text = r.recognize_google(audio)
+    text = r.recognize_google(audio, language='ru)
     print("Human's command: " + text)
 except sr.UnknownValueError:
     print("Google Speech Recognition could not understand audio")
